@@ -1,0 +1,72 @@
+@import "reset5.css";
+
+body {
+	background: url('/static/images/dark-tiles/{=tile}');
+	padding: 0; margin: 0;
+}
+#center {
+	border-top: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+	border-color: rgba(204,204,204, 0.4);
+	background: #E2E2E2;
+	background: rgba(226,226,226, 0.4);
+	
+	margin-top: 25%;
+x	-webkit-perspective: 2000;
+	position: relative;
+	box-shadow: 0 0 20px #000;
+}
+h1 {
+	font: normal 160px/160px impact;
+	margin: -110px 25px 0;
+	padding: 0;
+x	-webkit-transform-origin: 0 0;
+x	-webkit-animation-name: rotateY-animation;
+x	-webkit-animation-duration: 500s;
+x	-webkit-animation-iteration-count: infinite;
+x	-webkit-animation-timing-function: linear;
+	color: #F7F5E9;
+	text-shadow: 0 0 8px rgba(0, 0, 0, 0.99);
+}
+@-webkit-keyframes rotateY-animation {
+	0% {
+		-webkit-transform: scale(0.87);
+		}
+	50% {
+		-webkit-transform: scale(1);
+		color: rgba(0,0,0,0);
+		text-shadow: 0 0 8px rgba(255,255,255, 0.99);
+		}
+	100% {
+		-webkit-transform: scale(0.87);
+		}
+}
+
+h2 {
+	font: normal 24px/24px arial;
+	text-shadow: 1px 1px 2px #333;
+	color: black;
+	color: rgba(255, 255, 255, 1);
+	margin: 0 25px 25px;
+	padding: 0;
+}
+p {
+	font-family: Courier New;
+	padding: 12px 25px;
+	margin: 0;
+	white-space: pre;
+	background: rgba(255,255,255, 0.6);
+}
+#notify {
+	position: absolute;
+	bottom: -20px;
+	right: 25px;
+	color: #FFF;
+	font: normal 9px Arial;
+	text-decoration: none;
+	opacity: 0.35;
+	-webkit-transition: 200ms opacity ease-in-out;
+}
+#notify:hover {
+	opacity: 1;
+}

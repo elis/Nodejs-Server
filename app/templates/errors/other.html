@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><?=errorCode?> - <?=reasonPhrase?></title>
+	<link rel="stylesheet" href="/static/css/error.css"/>
+	<script type="text/javascript">
+		var process = <?=process?>,
+			devMode = <?=devMode?>;
+		
+		if (devMode) {
+			console.log('Dev Mode', process);
+		}
+	</script>
+</head>
+<body style="background-image: url('/static/images/dark-tiles/<?=tile?>')">
+	<div id="center">
+		<h1><?=errorCode?> Dev Mode</h1>
+		<h2><?=reasonPhrase?></h2>
+		<p><?= extra ?></p>
+		<a href="mailto:eli.sklar+c360error@gmail.com?subject=C360 Error <?=errorCode?>&body=url: <?=requestURL?>" id="notify">Notify Admin</a>
+	</div>
+</body>
+</html>

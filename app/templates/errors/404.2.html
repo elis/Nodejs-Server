@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><?= errorCode ?> - <?= reasonPhrase ?></title>
+	<link rel="stylesheet" href="/static/css/error.css"/>
+	<script type="text/javascript">	</script>
+</head>
+<body style="background-image: url('/static/images/dark-tiles/<?= tile ?>')">
+	<div id="center">
+		<h1><?= errorCode ?></h1>
+		<h2><?= reasonPhrase ?></h2>
+		<p>Section name: <code><?= extra ?></code></p>
+		<a href="mailto:eli.sklar+server-error@gmail.com?subject=Server Error <?=errorCode ?>&body=url: <?= requestURL ?>" id="notify">Notify Admin</a>
+	</div>
+</body>
+</html>
