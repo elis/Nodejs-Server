@@ -1,0 +1,15 @@
+{
+	"leftbar": true,
+	"rightbar": false,
+	"contentColumns": 2,
+	"columns": [
+		// ["eikon", "t1", "grc"],
+		// ["pharma", "law"]
+	],
+	"modules": {
+		"eikon": {
+			"hide": []
+		}
+	},
+	"devmode": true
+}

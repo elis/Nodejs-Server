@@ -1,0 +1,52 @@
+				<div id="<?= id ?>">
+					<div class="nav">
+<? if (modules) { ?>
+						<h3>Topics</h3>
+						<ul class="l">
+						
+	<? for (var moduleId in modules) { var module = modules[moduleId]; ?>
+	<!-- < ?- JSON.stringify([moduleId, modules]) ? > -->
+							<li class="i<?=
+								(moduleId == query.moduleId)
+									? ' active'
+									: ''
+								?><?= module.links ? ' sl' : ''?>" data-module-id="<?=moduleId?>">
+								<a><span><?= module.title ?></span></a>
+		<? if (module.links) { ?> 
+								<ul class="l sub">
+				<? for (var sectionName in module.links) {
+						var link = module.links[sectionName],
+							sectionId = moduleId + '/' + sectionName; 
+						if (!link.title) continue;
+				?>
+									<li class="i<?=
+								(sectionName == query.sectionName)
+									? ' active'
+									: ''
+								?>" data-section-nav="<?=sectionId?>">
+										<a href="<?= module.baseURL ?>/<?= module.id ?>/<?= sectionName ?>">
+											<span><?= link.title ?></span>
+										</a>
+									</li>
+				<? /* /for */ } ?>
+								</ul>
+		<? /* /if */ } ?>
+	<? /* /for */ } ?>
+						</ul>
+<? /* /if */ } ?>
+						<h3>Customized Views</h3>
+						<ul>
+							<li class="active"><a href="#some-link"><span>Financial</span></a></li>
+							<li><a href="#another-link"><span>News</span></a></li>
+							<li><a href="#another-link"><span>Legal</span></a></li>
+							<li><a href="#another-link"><span>Intellectual Property</span></a></li>
+						</ul>
+						
+						<h3>Your View</h3>
+						<ul>
+							<li class="active"><a href="#some-link"><span>Financial</span></a></li>
+							<li><a href="#another-link"><span>News</span></a></li>
+							<li><a href="#another-link"><span>Legal</span></a></li>
+						</ul>
+					</div>
+				</div>

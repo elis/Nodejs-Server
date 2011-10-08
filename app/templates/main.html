@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Page Served - <?= title ?></title>
+		<link rel="stylesheet" href="/static/css/reset5.css"/>
+		<link rel="stylesheet" href="/static/css/grid.css"/>
+		<link rel="stylesheet" href="/static/css/main.css"/>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			if (typeof jQuery == 'undefined')
+			{
+			    document.write(unescape("%3Cscript src='/static/js/lib/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+			}
+			
+			var C360Layout = window.C360Layout = <?- JSON.stringify(layout) ?>
+		</script>
+		<script type="text/javascript" src="/static/js/lib/history.js/amplify.store.js"></script>
+		<script type="text/javascript" src="/static/js/lib/history.js/history.adapter.jquery.js"></script>
+		<script type="text/javascript" src="/static/js/lib/history.js/history.js"></script>
+		<script type="text/javascript" src="/static/js/lib/history.js/history.html4.js"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="head">
+				<div id="logo">
+					<a href="/"><span>Company 360</span></a>
+				</div>
+				
+				<div id="search-box">
+					<input type="text" id="search" placeholder="Search..." />
+					<button>Search</button>
+				</div>
+				
+				<div id="ctitle" data-section-nav="main">
+					<h1 class="company-title"><a href="{=appURL}" data-section-nav="main">Merck & Co., Inc.</a></h1>
+					<span class="pub">(Public, NYSE:MRK)</span>
+					<span class="date">JUN-08-2011</span>sa
+				</div>
+			</div>
+			<div id="main" class="<?= (leftbar ? 'leftbar' : '')+' '+(rightbar ? 'rightbar' : '') ?>">
+
+			<? if (leftbar) { ?>
+			<? /* Left Sidebar */ ?>
+				<div id="sidebar">
+					<div class="nav">
+						<h3>Topics</h3>
+						<ul>
+							<li class="active" data-section-nav="main"><a href="#main"><span>Financial</span></a>
+							</li>
+							<li data-section-nav="eikon"><a href="#eikon"><span>Eikon</span></a></li>
+							<li data-section-nav="legal"><a><span>Legal</span></a></li>
+							<li><a href="#another-link"><span>Intellectual Property</span></a></li>
+							<li><a href="#another-link"><span>Clinical Trials</span></a></li>
+							<li><a href="#another-link"><span>ESG (Asset4)</span></a></li>
+							<li><a href="#another-link"><span>GRC</span></a></li>
+							<li><a href="#another-link"><span>OA</span></a></li>
+							<li><a href="#another-link"><span>Atlas</span></a></li>
+						</ul>
+						
+						<h3>Customized Views</h3>
+						<ul>
+							<li class="active"><a href="#some-link"><span>Financial</span></a></li>
+							<li><a href="#another-link"><span>News</span></a></li>
+							<li><a href="#another-link"><span>Legal</span></a></li>
+							<li><a href="#another-link"><span>Intellectual Property</span></a></li>
+						</ul>
+						
+						<h3>Your View</h3>
+						<ul>
+							<li class="active"><a href="#some-link"><span>Financial</span></a></li>
+							<li><a href="#another-link"><span>News</span></a></li>
+							<li><a href="#another-link"><span>Legal</span></a></li>
+						</ul>
+					</div>
+				</div>
+			<? /* /Left Sidebar */ ?>
+			<? } ?>
+
+
+			<? if (rightbar) { ?>
+			<? /* Left Sidebar */ ?>
+				<div id="otherbar">
+					<div class="nav">
+						<h3>Topics</h3>
+						<ul>
+							<li class="active" data-nav="financial"><a><span>Financial</span></a></li>
+							<li><a href="#another-link"><span>News</span></a></li>
+							<li><a href="#another-link"><span>Legal</span></a></li>
+							<li><a href="#another-link"><span>Intellectual Property</span></a></li>
+							<li><a href="#another-link"><span>Clinical Trials</span></a></li>
+							<li><a href="#another-link"><span>ESG (Asset4)</span></a></li>
+							<li><a href="#another-link"><span>GRC</span></a></li>
+							<li><a href="#another-link"><span>OA</span></a></li>
+							<li><a href="#another-link"><span>Atlas</span></a></li>
+						</ul>
+						
+						<h3>Customized Views</h3>
+						<ul>
+							<li class="active"><a href="#some-link"><span>Financial</span></a></li>
+							<li><a href="#another-link"><span>News</span></a></li>
+							<li><a href="#another-link"><span>Legal</span></a></li>
+							<li><a href="#another-link"><span>Intellectual Property</span></a></li>
+						</ul>
+						
+						<h3>Your View</h3>
+						<ul>
+							<li class="active"><a href="#some-link"><span>Financial</span></a></li>
+							<li><a href="#another-link"><span>News</span></a></li>
+							<li><a href="#another-link"><span>Legal</span></a></li>
+						</ul>
+					</div>
+				</div>
+			<? /* /Right Sidebar */ ?>
+			<? } ?>
+
+
+			<? /* Content */ ?>
+				<div id="content">
+					<div class="sections grid-area clearfix container_12">
+						<div class="section active clearfix" data-section-id="main">
+							<?= grid ?>
+						</div>
+					</div>
+				</div>
+				<div class="clear"></div>
+
+
+			<? /* Footer */ ?>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="/static/js/main.js"></script>
+	</body>
+</html>

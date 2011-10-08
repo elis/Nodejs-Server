@@ -1,0 +1,14 @@
+{
+	"leftbar": true,
+	"rightbar": false,
+	"contentColumns": 2,
+	"columns": [
+		["imdb", "rotten", "tmdb"],
+		["tpb"]
+	],
+	"modules": {
+		"eikon": {
+			"hide": []
+		}
+	}
+}

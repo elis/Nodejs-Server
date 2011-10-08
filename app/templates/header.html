@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Movies</title>
+		<link rel="stylesheet" href="/static/css/reset5.css"/>
+		<link rel="stylesheet" href="/static/css/grid.css"/>
+		<link rel="stylesheet" href="/static/css/main.css"/>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+		<script type="text/javascript">
+			if (typeof jQuery == 'undefined') {
+			    document.write(unescape("%3Cscript src='/static/js/lib/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+			}
+			if (typeof JSON == 'undefined') {
+			    document.write(unescape("%3Cscript src='/static/js/lib/json2.js' type='text/javascript'%3E%3C/script%3E"));
+			}
+		</script>
+		<script type="text/javascript" src="/static/js/lib/history.js/amplify.store.js"></script>
+		<script type="text/javascript" src="/static/js/lib/history.js/history.adapter.jquery.js"></script>
+		<script type="text/javascript" src="/static/js/lib/history.js/history.js"></script>
+		<script type="text/javascript" src="/static/js/lib/history.js/history.html4.js"></script>
+		<script type="text/javascript" src="/static/js/main.js"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="head">
+				<div id="logo">
+					<a href="/"><span>Company 360</span></a>
+				</div>
+				
+				<div id="search-box">
+					<input type="text" id="search" placeholder="Search..." />
+					<button>Search</button>
+				</div>
+				
+				<div id="ctitle" data-section-nav="main">
+					<h1 class="company-title"><a href="<?=appURL?>" data-section-nav="main">Title</a></h1>
+					<span class="pub">(Public, 222)</span>
+					<span class="date">JUN-08-2011</span>
+				</div>
+			</div>
+			<div id="main" class="<?= (leftbar ? 'leftbar' : '')+' '+(rightbar ? 'rightbar' : '') ?>">
