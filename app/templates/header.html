@@ -13,6 +13,8 @@
 			if (typeof JSON == 'undefined') {
 			    document.write(unescape("%3Cscript src='/static/js/lib/json2.js' type='text/javascript'%3E%3C/script%3E"));
 			}
+			var appURL = window.appURL = "<?=appURL?>",
+				query = window.query = <?- JSON.stringify(query) ?>;
 		</script>
 		<script type="text/javascript" src="/static/js/lib/history.js/amplify.store.js"></script>
 		<script type="text/javascript" src="/static/js/lib/history.js/history.adapter.jquery.js"></script>

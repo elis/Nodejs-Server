@@ -1,4 +1,4 @@
-var C360 = window.C360 = {};
+var App = window.App = {};
 
 function Section (el, sectionId) {
 	if (!(this instanceof Section)) return new Section(el);
@@ -253,5 +253,5 @@ Section.fromNode = function (name, $el) {
 			$iframe.attr('height', height);
 		});
 	});
-	C360 = api;
+	App = api;
 }(jQuery))

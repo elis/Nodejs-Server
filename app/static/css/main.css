@@ -286,8 +286,8 @@ Module */
 		text-decoration: underline;
 	}
 	.module .con {
-		border-top: 2px solid #F0F;
-		border-bottom: 1px solid #F0F;
+		border-top: 2px solid #065BD5;
+		border-bottom: 1px solid #065BD5;
 		padding: 12px;
 	}
 	.module h2 {
